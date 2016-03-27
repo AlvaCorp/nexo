@@ -1,0 +1,11 @@
+v2.2
+====
+- Introduce demo content
+- Search box
+- New settings option
+- Bug fix !
+
+v2.1
+====
+- Creating Bon_davoir table
+- Removing unused table

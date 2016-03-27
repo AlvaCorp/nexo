@@ -1,0 +1,13 @@
+Actions: 
+========
+Regroupe toutes les actions de la boutique
+
+/**
+ *	nexo_checkout_footer
+ *  Exécute une action au pied de page de la boutique
+**/
+	
+/**
+ * nexo_daily_report_footer 
+ * Execute une action au peid de page du rapport journalier
+**/	
