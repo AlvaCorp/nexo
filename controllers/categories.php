@@ -22,16 +22,21 @@ class Nexo_Categories extends CI_Model
 		$crud = new grocery_CRUD();
 
 		$crud->set_theme('bootstrap');
-		$crud->set_subject( 'Catégories' );	
+		$crud->set_subject( __( 'Catégorie', 'nexo' ) );	
 
 		$crud->set_table( $this->db->dbprefix( 'nexo_categories' )  );
 		$crud->columns( 'NOM',  'PARENT_REF_ID', 'DESCRIPTION' );
 		$crud->fields( 'NOM', 'PARENT_REF_ID', 'DESCRIPTION' );
-		$crud->set_relation( 'PARENT_REF_ID', 'nexo_categories','NOM');
 		
-		$crud->display_as('NOM','Nom de la catégorie');
-		$crud->display_as('DESCRIPTION','Description');
-		$crud->display_as('PARENT_REF_ID','Catégorie parente');
+		$state = $crud->getState();
+		if($state == 'add' || $state == 'edit' || $state == 'read')
+		{
+			$crud->set_relation( 'PARENT_REF_ID', 'nexo_categories', __( 'Nom', 'nexo' ) );
+		}
+		
+		$crud->display_as('NOM',__( 'Nom de la catégorie', 'nexo' ) );
+		$crud->display_as('DESCRIPTION',__( 'Description de la catégorie', 'nexo' ) );
+		$crud->display_as('PARENT_REF_ID',__( 'Catégorie parente', 'nexo' ) );
 		
 		$crud->required_fields( 'NOM' );
 		

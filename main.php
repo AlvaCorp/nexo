@@ -66,9 +66,6 @@ class Nexo extends CI_Model
 	{
 		global $Options;
 
-		if( Modules::is_active( 'grocerycrud' ) ) {
-		}
-		
 		$this->lang->load( '../../modules/nexo/language/nexo_lang' );
 	}
 	
@@ -106,7 +103,8 @@ class Nexo extends CI_Model
 	
 	public function dashboard()
 	{
-		if( ! Modules::is_active( 'grocerycrud' ) ) {
+		$escapeAds 	=	$this->events->apply_filters( 'nexo_escape_nexoadds', Modules::is_active( 'nexoads' ) );
+		if( ! Modules::is_active( 'grocerycrud' ) || $escapeAds == false ) {
 			Modules::disable( 'nexo' );
 			redirect( array( 'dashboard', 'modules?highlight=Nexo&notice=error-occured' ) );
 		}
@@ -127,6 +125,7 @@ class Nexo extends CI_Model
         <link rel="stylesheet" href="<?php echo css_url( 'nexo' ) . 'jquery-ui.css';?>">
 		<script src="<?php echo js_url( 'nexo' ) . 'jquery-ui.min.js';?>"></script>
         <script src="<?php echo module_url( 'nexo' ) . '/bower_components/Chart.js/Chart.min.js';?>"></script>
+        <script src="<?php echo module_url( 'nexo' ) . '/js/html5-audio-library.js';?>"></script>
         <script type="text/javascript">
 		Number.prototype.format = function(n, x, s, c) {
 			var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\D' : '$') + ')',

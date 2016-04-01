@@ -1,4 +1,5 @@
 <?php
+! defined( 'APPPATH' ) ? die() : NULL;
 
 use Carbon\Carbon;
 
@@ -19,7 +20,7 @@ class Nexo_Cron extends CI_Model
 	
 	public function run_cron()
 	{
-		$this->treat_stats( '2016-03-10', '2016-03-20' );
+		$this->treat_stats();
 	}
 	
 	/**
@@ -34,11 +35,13 @@ class Nexo_Cron extends CI_Model
 	{
 		$Cstart_date							=	$start_date == NULL ? date_now() : $start_date;
 		$Cend_date								=	$end_date == NULL ? date_now() : $end_date;		
-		$CarbonStart							=	Carbon::parse( $Cstart_date );		
-		$CarbonEnd								=	Carbon::parse( $Cend_date );		
+		$CarbonStart							=	Carbon::parse( $Cstart_date )->subDays( 7 );		
+		$CarbonEnd								=	Carbon::parse( $Cend_date );
 		$Stats									=	array();
 		
-		$this->load->driver('cache', array('adapter' => 'file', 'backup' => 'file', 'key_prefix'	=>	$this->cache_namespace ) );		
+		$this->init_cache();
+		
+		// $this->load->driver('cache', array('adapter' => 'file', 'backup' => 'file', 'key_prefix'	=>	$this->cache_namespace ) );		
 		
 		if( $CarbonStart->diffInDays( $CarbonEnd ) > 1 && $CarbonStart->lt( $CarbonEnd ) ) {
 			// Looping Day beetween two dates
@@ -78,13 +81,12 @@ class Nexo_Cron extends CI_Model
 		
 		// Get order for this day
 		
-		$Orders							=	$this->Nexo_Checkout->get_order( array(
-			'DATE_CREATION >=' 			=>	$CarbonStartCopy2->toDateTimeString(),
-			'DATE_CREATION <=' 			=> 	$CarbonStartCopy->toDateTimeString()
+		$Orders								=	$this->Nexo_Checkout->get_order( array(
+			'DATE_CREATION >=' 				=>	$CarbonStartCopy2->toDateTimeString(),
+			'DATE_CREATION <=' 				=> 	$CarbonStartCopy->toDateTimeString()
 		) );
 		
-		$TotalOrder							=	$Orders ? count ( $Orders ) : 0;
-		
+		$TotalOrder							=	$Orders ? count ( $Orders ) : 0;		
 		$Stats[ 'order_nbr' ]				=	$TotalOrder;
 		$Stats[ 'chiffre_daffaire_net' ]	=	0;
 		
@@ -135,7 +137,8 @@ class Nexo_Cron extends CI_Model
         }
 		
 		$Stats				=	array();
-		$this->load->driver('cache', array('adapter' => 'file', 'backup' => 'file', 'key_prefix'	=>	$this->cache_namespace ) );
+		
+		$this->init_cache();
 		
 		foreach( $Dates as $Date ) {
 			$CurrentDate	=	Carbon::parse( $Date );
@@ -146,6 +149,17 @@ class Nexo_Cron extends CI_Model
 		}
 		
 		return $Stats;
+	}
+	
+	/**
+	 * Init Cache
+	 *
+	 * @return void
+	**/
+	
+	public function init_cache()
+	{
+		$this->cache	=	new CI_Cache( array('adapter' => 'file', 'backup' => 'file', 'key_prefix'	=>	$this->cache_namespace ) );
 	}
 }
 new Nexo_Cron;

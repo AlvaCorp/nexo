@@ -247,10 +247,6 @@ var	NexoCommandes			=	new function(){
 	 * @return void
 	**/
 	
-	/**
-	 * <?php var_dump( $Options[ 'nexo_enable_autoprint' ] );?>
-	**/
-
 	this.ResetCart						=	function(){
 		this.CartValue				=	0;
 		this.Received				=	0;
@@ -382,9 +378,8 @@ var	NexoCommandes			=	new function(){
 		}
 		// La restauration du panier se fait, même sur l'interface d'édition des commandes
 		this.HideDiscountText();
-		this.SetOtherCharge(0); // restaurer les autres charges (remise)
 		this.ProceedPercentDiscount	=	false;
-		this.RefreshCart();
+		this.SetOtherCharge(0); // restaurer les autres charges (remise)
 		// La recherche des réduction automatique ne se fait que pour le client
 		if( client_id != NexoCurrentClient || NexoScreen == 'new' ) {
 			$.ajax( tendoo.dashboard_url  + '/nexo/rest/get/nexo_clients/ID',{
@@ -406,7 +401,18 @@ var	NexoCommandes			=	new function(){
 								NexoCommandes.RefreshCart();
 								<?php
 							}
+							
+							/**
+							 * Corrige le blug majeure de la version 2.4.2
+							 * Les commandes soumis à une réduction automatique au pourcentage conservait leur charge après changement du client
+							 * #2.4.2
+							 * @author Blair Jersyer
+							**/
+							
 							?>
+							
+						} else {
+							NexoCommandes.RefreshCart();
 						}
 					}
 				},
@@ -497,7 +503,7 @@ var	NexoCommandes			=	new function(){
 	**/
 
 	this.Sound							=	function( sound ){
-		var SoundEnabled				=	'<?php echo @$Options[ 'nexo_enable_sound' ];?>';
+		var SoundEnabled				=	'<?php echo @$Options[ 'nexo_soundfx' ];?>';
 		if( ( SoundEnabled.length != 0 || SoundEnabled == 'enable' ) && SoundEnabled != 'disable' ) {
 			var music = new buzz.sound( NexoSound + sound , {
 				formats: [ "mp3" ]

@@ -21,14 +21,14 @@ class Nexo_Arrivages extends CI_Model
 		
 		$crud = new grocery_CRUD();
 		$crud->set_theme('bootstrap');
-		$crud->set_subject( 'Arrivages' );	
+		$crud->set_subject( 'Livraisons' );	
 
 		$crud->set_table( $this->db->dbprefix( 'nexo_arrivages' )  );
 		$crud->columns( 'TITRE', 'FOURNISSEUR_REF_ID', 'DESCRIPTION' );
 		$crud->fields( 'TITRE', 'FOURNISSEUR_REF_ID', 'DESCRIPTION' );
 		$crud->set_relation( 'FOURNISSEUR_REF_ID', 'nexo_fournisseurs','NOM');
 		
-		$crud->display_as('TITRE', __( 'Nom de la collection', 'nexo' ) );
+		$crud->display_as('TITRE', __( 'Nom de la livraison', 'nexo' ) );
 		$crud->display_as('DESCRIPTION', __( 'Description', 'nexo' ) );
 		$crud->display_as('FOURNISSEUR_REF_ID', __( 'Fournisseur', 'nexo' ) );
 		
@@ -55,9 +55,9 @@ class Nexo_Arrivages extends CI_Model
 		$_var1	=	'arrivages';		
 		
 		if( $page == 'index' ) {
-			$this->Gui->set_title( __( 'Liste des arrivages &mdash; Nexo', 'nexo' ) );
+			$this->Gui->set_title( __( 'Liste des livraisons &mdash; Nexo', 'nexo' ) );
 		} else {
-			$this->Gui->set_title( __( 'Ajouter un nouvel arrivage &mdash; Nexo', 'nexo' ) );	
+			$this->Gui->set_title( __( 'Ajouter une nouvelle livraison &mdash; Nexo', 'nexo' ) );	
 		}
 		$this->load->view( '../modules/nexo/views/' . $_var1 . '-list.php', $data );
 	}
@@ -66,7 +66,7 @@ class Nexo_Arrivages extends CI_Model
 	{		
 		$data[ 'crud_content' ]	=	$this->crud_header();
 		$_var1	=	'arrivages';
-		$this->Gui->set_title( sprintf( __( 'Ajouter un nouvel arrivage : &mdash; %s', 'nexo' ) , ucwords( str_replace( '_' , ' ' , $_var1 ) ), get( 'core_signature' ) ) );
+		$this->Gui->set_title( sprintf( __( 'Ajouter une nouvelle livraison : &mdash; %s', 'nexo' ) , ucwords( str_replace( '_' , ' ' , $_var1 ) ), get( 'core_signature' ) ) );
 		$this->load->view( '../modules/nexo/views/' . $_var1 . '-list.php', $data );
 	}
 	

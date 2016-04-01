@@ -417,3 +417,6 @@ $this->options->set( 'nexo_currency_position', 'before', true );
 $this->options->set( 'default_payment_means', 1, true );
 
 $this->options->set( 'nexo_enable_sound', 'enable' ); 
+
+// Disabling discount
+$this->options->set( 'discount_type', 'disable', true );

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nexo\n"
-"POT-Creation-Date: 2016-03-16 02:11+0200\n"
-"PO-Revision-Date: 2016-03-16 14:26+0200\n"
+"POT-Creation-Date: 2016-04-01 19:50+0300\n"
+"PO-Revision-Date: 2016-04-01 19:51+0300\n"
 "Last-Translator: \n"
 "Language-Team: Tendoo Dev Team <carlosjohnsonluv2004@gmail.com>\n"
 "Language: en\n"
@@ -17,8 +17,8 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: controllers/arrivages.php:31
-msgid "Nom de la collection"
-msgstr "Collection Name"
+msgid "Nom de la livraison"
+msgstr "Delivery name"
 
 #: controllers/arrivages.php:32 controllers/paiements.php:30
 #: controllers/produits.php:51 controllers/types_de_commandes.php:27
@@ -35,22 +35,18 @@ msgstr "﻿Supplier"
 msgid "Etiquettes des articles"
 msgstr "Labels of the items"
 
-#: controllers/arrivages.php:56 controllers/clients.php:61
-#: controllers/commandes.php:137 controllers/commandes.php:147
-#: controllers/fournisseurs.php:58 controllers/paiements.php:51
-#: controllers/produits.php:109 controllers/rayons.php:52
-#: controllers/types_de_commandes.php:48
-#, php-format
-msgid "Liste : %s &mdash; %s"
-msgstr "List: %s -%s"
+#: controllers/arrivages.php:58
+msgid "Liste des livraisons &mdash; Nexo"
+msgstr "List of deliveries &mdash; Nexo"
 
-#: controllers/arrivages.php:64 controllers/clients.php:69
-#: controllers/fournisseurs.php:66 controllers/paiements.php:59
-#: controllers/produits.php:120 controllers/rayons.php:60
-#: controllers/types_de_commandes.php:56
-#, fuzzy, php-format
-msgid "Ajouter : %s &mdash; %s"
-msgstr "Add:%s -%s"
+#: controllers/arrivages.php:60
+msgid "Ajouter une nouvelle livraison &mdash; Nexo"
+msgstr "Add a new delivery &mdash; Nexo"
+
+#: controllers/arrivages.php:69
+#, php-format
+msgid "Ajouter une nouvelle livraison : &mdash; %s"
+msgstr "Add a new delivery: &mdash; %s"
 
 #: controllers/bon_davoir.php:31
 msgid "Justification du bon d'avoir"
@@ -78,25 +74,55 @@ msgstr "Select the relevant order"
 msgid "Montant du bon d'avoir"
 msgstr "Good To Have"
 
-#: controllers/bon_davoir.php:62 controllers/categories.php:55
+#: controllers/bon_davoir.php:62
 #, fuzzy
-msgid "Liste : "
-msgstr "List:"
+msgid "Liste des bons d'avoir &mdash; Nexo"
+msgstr "List of vouchers have &mdash; Nexo"
 
-#: controllers/bon_davoir.php:70 controllers/categories.php:63
+#: controllers/bon_davoir.php:70
 #, fuzzy
-msgid "Ajouter : "
-msgstr "Add:"
+msgid "Créer un nouveau bon d'avoir &mdash; Nexo"
+msgstr "Create a new good to have &mdash; Nexo"
 
-#: controllers/clients.php:29 views/commandes-script.php:633
+#: controllers/categories.php:25
+msgid "Catégorie"
+msgstr "Category"
+
+#: controllers/categories.php:34
+msgid "Nom"
+msgstr "Name"
+
+#: controllers/categories.php:37
+msgid "Nom de la catégorie"
+msgstr "Category Name"
+
+#: controllers/categories.php:38
+msgid "Description de la catégorie"
+msgstr "Category Description"
+
+#: controllers/categories.php:39
+msgid "Catégorie parente"
+msgstr "Parent Category"
+
+#: controllers/categories.php:60
+#, fuzzy
+msgid "Liste des catégories &mdash; Nexo"
+msgstr "List of categories &mdash; Nexo"
+
+#: controllers/categories.php:68
+#, fuzzy
+msgid "Créer une nouvelle catégorie &mdash; Nexo"
+msgstr "Create a new category &mdash; Nexo"
+
+#: controllers/clients.php:29 views/commandes-script.php:644
 #, fuzzy
 msgid "Nom du client"
 msgstr "Client Name"
 
-#: controllers/clients.php:30 views/commandes-script.php:639
+#: controllers/clients.php:30 views/commandes-script.php:650
 #, fuzzy
 msgid "Email du client"
-msgstr "Client Email"
+msgstr "Customer email"
 
 #: controllers/clients.php:31
 msgid "Nombre de commandes"
@@ -123,7 +149,7 @@ msgstr "Customer Preference"
 #: controllers/clients.php:36
 #, fuzzy
 msgid "Date de naissance"
-msgstr "Date of Birth"
+msgstr "Date of birth"
 
 #: controllers/clients.php:37
 #, fuzzy
@@ -135,15 +161,25 @@ msgstr "Address"
 msgid "Taille"
 msgstr "Size"
 
-#: controllers/clients.php:42 views/commandes-script.php:640
+#: controllers/clients.php:42 views/commandes-script.php:651
 #, fuzzy
 msgid "Email"
 msgstr "E-mail"
 
+#: controllers/clients.php:61
+#, fuzzy
+msgid "Liste des clients &mdash; Nexo"
+msgstr "List of customers &mdash; Nexo"
+
+#: controllers/clients.php:69
+#, fuzzy
+msgid "Ajouter un nouveau client &mdash; Nexo"
+msgstr "Add a new customer &mdash; Nexo"
+
 #: controllers/commandes.php:24
 #, fuzzy
 msgid "Commandes"
-msgstr "Orders"
+msgstr "Commands"
 
 #: controllers/commandes.php:31
 msgid "Imprimer le ticket de caisse"
@@ -181,7 +217,7 @@ msgstr "Payment method :"
 #: controllers/commandes.php:61
 #, fuzzy
 msgid "Type de la commande"
-msgstr "The type of the order"
+msgstr "Type the command: %s"
 
 #: controllers/commandes.php:62
 #, fuzzy
@@ -204,10 +240,18 @@ msgstr "Date modified"
 msgid "Total"
 msgstr "Total"
 
-#: controllers/commandes.php:108 controllers/commandes.php:119
-#, fuzzy, php-format
-msgid "Créer une nouvelle commande &mdash; %s"
-msgstr "Create a new order -%s"
+#: controllers/commandes.php:108
+msgid "Créer une nouvelle commande &mdash; Nexo"
+msgstr "Create a new order"
+
+#: controllers/commandes.php:119
+msgid "Modifier une commande existante &mdash; Nexo"
+msgstr "Edit order"
+
+#: controllers/commandes.php:137 controllers/commandes.php:147
+#, fuzzy
+msgid "Liste des commandes &mdash; Nexo"
+msgstr "Order list &mdash; Nexo"
 
 #: controllers/fournisseurs.php:23
 msgid "Fournisseurs"
@@ -234,6 +278,15 @@ msgstr "Supplier Phone"
 msgid "Description du fournisseur"
 msgstr "Supplier Description"
 
+#: controllers/fournisseurs.php:60
+#, fuzzy
+msgid "Liste des fournisseurs &mdash; Nexo"
+msgstr "List of providers &mdash; Nexo"
+
+#: controllers/fournisseurs.php:62 controllers/fournisseurs.php:72
+msgid "Ajouter un nouveau fournisseur &mdash; Nexo"
+msgstr "Add new supplier"
+
 #: controllers/paiements.php:24
 #, fuzzy
 msgid "Moyen de paiement"
@@ -242,6 +295,16 @@ msgstr "Means of payment"
 #: controllers/paiements.php:29
 msgid "Intitulé du moyen"
 msgstr "Means Title"
+
+#: controllers/paiements.php:51
+#, fuzzy
+msgid "Liste des types de paiements &mdash; Nexo"
+msgstr "List of types of payments &mdash; Nexo"
+
+#: controllers/paiements.php:59
+#, fuzzy
+msgid "Ajouter un nouveau type de paiement &mdash; Nexo"
+msgstr "Add a new type of payment &mdash; Nexo"
 
 #: controllers/print.php:38
 #, php-format
@@ -264,7 +327,7 @@ msgstr "Shipping not defined"
 #: controllers/produits.php:22
 #, fuzzy
 msgid "Articles"
-msgstr "Items"
+msgstr "Category for mens items"
 
 #: controllers/produits.php:37 views/commandes-dom.php:21
 #, fuzzy
@@ -337,7 +400,7 @@ msgstr "Weight"
 #: controllers/produits.php:52
 #, fuzzy
 msgid "Couleur"
-msgstr "Color"
+msgstr "Colour"
 
 #: controllers/produits.php:53
 #, fuzzy
@@ -386,6 +449,16 @@ msgstr "Defective Quantity"
 msgid "Frais Accessoires"
 msgstr "Incidental costs or charges"
 
+#: controllers/produits.php:105
+#, fuzzy
+msgid "Liste des articles &mdash; Nexo"
+msgstr "List of articles &mdash; Nexo"
+
+#: controllers/produits.php:107 controllers/produits.php:124
+#, fuzzy
+msgid "Ajouter un nouvel article &mdash; Nexo"
+msgstr "Add a new article &mdash; Nexo"
+
 #: controllers/rapports.php:70
 #, fuzzy
 msgid "Le rapport ne peut être affiché, la date spécifiée est incorrecte"
@@ -410,6 +483,21 @@ msgstr "Radius Name"
 #, fuzzy
 msgid "Description du rayon"
 msgstr "Description of the radius"
+
+#: controllers/rayons.php:54
+#, fuzzy
+msgid "Créer un nouveau rayon &mdash; Nexo"
+msgstr "Create a new RADIUS &mdash; Nexo"
+
+#: controllers/rayons.php:56
+#, fuzzy
+msgid "Liste des rayons &mdash; Nexo"
+msgstr "List rays &mdash; Nexo"
+
+#: controllers/rayons.php:66
+#, fuzzy
+msgid "Créer une nouveau rayon &mdash; Nexo"
+msgstr "Create a new RADIUS &mdash; Nexo"
 
 #: controllers/reset_shop.php:33
 #, fuzzy
@@ -440,9 +528,9 @@ msgid "Vous n'avez pas les permissions requises pour effectuer cette action"
 msgstr "You do not have the required permissions to perform this action"
 
 #: controllers/settings.php:19
-#, fuzzy, php-format
-msgid "Réglages de la boutique &mdash; %s"
-msgstr "Settings Shop -%s"
+#, fuzzy
+msgid "Réglages de la boutique &mdash; Nexo"
+msgstr "Shop settings &mdash; Nexo"
 
 #: controllers/types_de_commandes.php:21
 #, fuzzy
@@ -454,188 +542,185 @@ msgstr "List the types of orders"
 msgid "Intitulé du type"
 msgstr "Title type"
 
-#: inc/controller.php:26 views/commandes-dom.php:50
+#: controllers/types_de_commandes.php:48
 #, fuzzy
+msgid "Liste des types de commandes &mdash; Nexo"
+msgstr "List of commands &mdash; Nexo"
+
+#: controllers/types_de_commandes.php:56
+#, fuzzy
+msgid "Créer un nouveau type de commande &mdash; Nexo"
+msgstr "Create a new command type &mdash; Nexo"
+
+#: inc/controller.php:26 views/commandes-dom.php:50
 msgid "Caisse"
 msgstr "Checkout"
 
 #: inc/controller.php:32
-msgid "Historique des commandes"
-msgstr "Orders history"
+msgid "Liste des commandes"
+msgstr "List Orders"
 
 #: inc/controller.php:37 views/commandes-new.php:9
 #, fuzzy
 msgid "Nouvelle commande"
 msgstr "New Order"
 
-#: inc/controller.php:42
-msgid "Liste des bons d'avoir"
-msgstr "Good to have list"
-
-#: inc/controller.php:47
-msgid "Nouveau bon d'avoir"
-msgstr "New good to have"
-
-#: inc/controller.php:52
+#: inc/controller.php:54
 #, fuzzy
 msgid "Liste des moyens de paiment"
 msgstr "List of payment means"
 
-#: inc/controller.php:57
+#: inc/controller.php:59
 #, fuzzy
 msgid "Ajouter un moyen de paiment"
 msgstr "Add a payment means"
 
-#: inc/controller.php:62
+#: inc/controller.php:64
 #, fuzzy
 msgid "Liste des types de commandes"
 msgstr "List of order types"
 
-#: inc/controller.php:67
+#: inc/controller.php:69
 #, fuzzy
 msgid "Ajouter un type de commande"
 msgstr "Add a command type"
 
-#: inc/controller.php:75
+#: inc/controller.php:77
 #, fuzzy
 msgid "Clients"
 msgstr "Customers"
 
-#: inc/controller.php:81
-#, fuzzy
-msgid "Tous les clients"
-msgstr "All clients"
+#: inc/controller.php:83
+msgid "Liste des clients"
+msgstr "Customers List"
 
-#: inc/controller.php:85
+#: inc/controller.php:87
 #, fuzzy
 msgid "Ajouter un client"
 msgstr "Add client"
 
-#: inc/controller.php:89
+#: inc/controller.php:91
 #, fuzzy
 msgid "Campagne publicitaires"
 msgstr "Advertising campaign"
 
-#: inc/controller.php:93
+#: inc/controller.php:95
 #, fuzzy
 msgid "Nouvelle campagne"
 msgstr "New Campaign"
 
-#: inc/controller.php:100
+#: inc/controller.php:102
 msgid "Arrivages"
 msgstr "Shippings"
 
-#: inc/controller.php:106
-msgid "Historique des arrivages"
-msgstr "Shipping History"
+#: inc/controller.php:108
+msgid "Liste des livraisons"
+msgstr "Deliveries List"
 
-#: inc/controller.php:110
-msgid "Nouvel arrivage"
-msgstr "New Shipping"
+#: inc/controller.php:112
+msgid "Nouvelle livraison"
+msgstr "New delivery"
 
-#: inc/controller.php:114 views/commandes-dom.php:16
-#, fuzzy
+#: inc/controller.php:116 views/commandes-dom.php:16
 msgid "Liste des articles"
-msgstr "Product List"
+msgstr "Items List"
 
-#: inc/controller.php:118
-#, fuzzy
+#: inc/controller.php:120
 msgid "Ajouter un article"
-msgstr "Add Section"
+msgstr "Add Item"
 
-#: inc/controller.php:122
+#: inc/controller.php:124
 msgid "Liste des fournisseurs"
-msgstr "Supplier List"
+msgstr "Suppliers List"
 
-#: inc/controller.php:126
+#: inc/controller.php:128
 #, fuzzy
 msgid "Ajouter un fournisseur"
 msgstr "Add a supplier"
 
-#: inc/controller.php:130
+#: inc/controller.php:132
 msgid "Liste des rayons"
 msgstr "List of radius"
 
-#: inc/controller.php:134
+#: inc/controller.php:136
 #, fuzzy
 msgid "Ajouter un rayon"
 msgstr "Add Radius"
 
-#: inc/controller.php:138
-#, fuzzy
+#: inc/controller.php:140
 msgid "Liste des catégories"
-msgstr "A list of categories"
+msgstr "Categories List"
 
-#: inc/controller.php:142
+#: inc/controller.php:144
 #, fuzzy
 msgid "Ajouter une catégorie"
 msgstr "Add a category"
 
-#: inc/controller.php:149
+#: inc/controller.php:151
 #, fuzzy
 msgid "Rapports & Statistiques"
 msgstr "Statistical reports"
 
-#: inc/controller.php:155
+#: inc/controller.php:157
 #, fuzzy
 msgid "Rapport Journalier"
 msgstr "Daily report"
 
-#: inc/controller.php:159
+#: inc/controller.php:161
 #, fuzzy
 msgid "Rendement Mensuel"
 msgstr "Monthly Performance"
 
-#: inc/controller.php:163
+#: inc/controller.php:165
 msgid "Statistiques des ventes"
 msgstr "Sales Analysis"
 
-#: inc/controller.php:167
+#: inc/controller.php:169
 #, fuzzy
 msgid "Fiche de suivi de stocks général"
 msgstr "General inventory tracking sheet"
 
-#: inc/controller.php:174
+#: inc/controller.php:176
 #, fuzzy
 msgid "Comptabilité"
 msgstr "Accounting"
 
-#: inc/controller.php:180
+#: inc/controller.php:182
 #, fuzzy
 msgid "Livre journal des ventes"
 msgstr "Book Sales Journal"
 
-#: inc/controller.php:184
+#: inc/controller.php:186
 #, fuzzy
 msgid "Livre journal du patrimoine"
 msgstr "Log book heritage"
 
-#: inc/controller.php:188
+#: inc/controller.php:190
 #, fuzzy
 msgid "Livre journal de l'exploitation"
 msgstr "Book operation log"
 
-#: inc/controller.php:195
+#: inc/controller.php:197
 #, fuzzy
 msgid "Maintenance & Historique"
 msgstr "Maintenance & History"
 
-#: inc/controller.php:200
+#: inc/controller.php:202
 #, fuzzy
 msgid "Historique des activités"
 msgstr "Activity History"
 
-#: inc/controller.php:204
+#: inc/controller.php:206
 #, fuzzy
 msgid "Exportation"
 msgstr "Export"
 
-#: inc/controller.php:208
+#: inc/controller.php:210
 #, fuzzy
 msgid "Importation"
 msgstr "Import"
 
-#: inc/controller.php:215
+#: inc/controller.php:217
 msgid "Réglages Nexo"
 msgstr "Nexo Settings"
 
@@ -810,7 +895,7 @@ msgstr "Article 10"
 #: inc/demo.php:371
 #, fuzzy
 msgid "Espèces"
-msgstr "Cash"
+msgstr "Species"
 
 #: inc/demo.php:372
 #, fuzzy
@@ -900,12 +985,12 @@ msgstr ""
 "of shop activity, to test all the features?<br><br><em>By pressing \"Cancel"
 "\", you can enable this option from the settings.</em>"
 
-#: inc/tours.php:47
+#: inc/tours.php:48
 #, fuzzy
 msgid "Choisissez une option de reinitialisation"
 msgstr "Choose an option of reset"
 
-#: inc/tours.php:48
+#: inc/tours.php:49
 #, fuzzy
 msgid "Veuillez choisir une option dans la liste de réinitialisation"
 msgstr "Please choose an option from the list of reset"
@@ -949,19 +1034,89 @@ msgstr ""
 msgid "Cette licence n'est plus valide. Veuillez fournir une licence valide."
 msgstr "This license is no longer valid. Please provide a valid license."
 
-#: main.php:155
+#: main.php:154
 #, fuzzy
 msgid "Nombres de commandes journalières"
 msgstr "Numbers of daily orders"
 
-#: main.php:163
+#: main.php:162
 #, fuzzy
 msgid "Chiffre d'affaire journalier"
 msgstr "Daily turnover"
 
+#: models/nexo_Checkout.php:433
+msgid "Gérant de la caisse"
+msgstr "Checkout Manager"
+
+#: models/nexo_Checkout.php:434
+msgid "Gérant de la boutique"
+msgstr "Shop Manager"
+
+#: models/nexo_Checkout.php:435
+msgid "Privilège pour testeur"
+msgstr "Tester Privilege"
+
+#: models/nexo_Checkout.php:439
+msgid "Peut créer des commandes"
+msgstr "Can create orders"
+
+#: models/nexo_Checkout.php:440
+msgid "Peut modifier des commandes"
+msgstr "Can change orders"
+
+#: models/nexo_Checkout.php:441
+msgid "Peut supprimer les commandes"
+msgstr "Can delete orders"
+
+#: models/nexo_Checkout.php:445
+msgid "Peut créer des produits"
+msgstr "Create products"
+
+#: models/nexo_Checkout.php:446
+msgid "Peut modifier des produits"
+msgstr "Can modify products"
+
+#: models/nexo_Checkout.php:447
+msgid "Peut supprimer des produits"
+msgstr "Can remove products"
+
+#: models/nexo_Checkout.php:448
+msgid "Gère les catégories"
+msgstr "Manage categories"
+
+#: models/nexo_Checkout.php:449
+msgid "Gère les rayons"
+msgstr "Manage rays"
+
+#: models/nexo_Checkout.php:450
+msgid "Gère les collections"
+msgstr "Manage collections"
+
+#: models/nexo_Checkout.php:451
+msgid "Gère les fournisseurs (Livreurs)"
+msgstr "Manage suppliers"
+
+#: models/nexo_Checkout.php:455
+msgid "Autorise la gestion complète de la boutique"
+msgstr "Allows the complete management of the shop"
+
+#: models/nexo_Misc.php:81 models/nexo_Misc.php:85
+msgid "Votre licence expire le %d-%m-%Y à %h:%i"
+msgstr "Your license expires o %d-%m-%Y - %h:%i "
+
+#: models/nexo_Misc.php:346
+#, fuzzy
+msgid "Le client a été correctement crée."
+msgstr "The customer has been properly created."
+
+#: models/nexo_Misc.php:351 views/shop-product-settings-script.php:39
+#, fuzzy
+msgid "Une erreur s'est produite."
+msgstr "An error has occurred."
+
 #: views/arrivages-list.php:8
-msgid "Gestion & Création des arrivages"
-msgstr "Shipping management"
+msgid "Gestion & Création des livraisons"
+msgstr "Delivery Management"
 
 #: views/articles-list.php:8
 msgid "Gestion & Création des produits"
@@ -1056,36 +1211,36 @@ msgstr "Order Modification"
 msgid "Gestion & Création des commandes"
 msgstr "Creation & Management of orders"
 
-#: views/commandes-script.php:63
+#: views/commandes-script.php:64
 msgid "Impossible d'ajouter cet article, car le stock vient de s'épuiser."
 msgstr "Cannot add this item because the stock has run out."
 
-#: views/commandes-script.php:74
+#: views/commandes-script.php:75
 msgid "Impossible d'ajouter cet article, car le stock est épuisé."
 msgstr "Cannot add this item because the stock is exhausted."
 
-#: views/commandes-script.php:78
+#: views/commandes-script.php:79
 #, fuzzy
 msgid "Cet article est introuvable ou le code est incorrect."
 msgstr "This article is not found or the code is incorrect."
 
-#: views/commandes-script.php:114
+#: views/commandes-script.php:115
 #, fuzzy
 msgid "Retirer"
 msgstr "Remove"
 
-#: views/commandes-script.php:114 views/commandes-script.php:548
-#: views/commandes-script.php:664
+#: views/commandes-script.php:115 views/commandes-script.php:559
+#: views/commandes-script.php:675
 #, fuzzy
 msgid "Ajouter"
 msgstr "Add"
 
-#: views/commandes-script.php:130
+#: views/commandes-script.php:131
 #, fuzzy
 msgid "Aucun article n'a été ajouté au panier"
 msgstr "No item added to cart"
 
-#: views/commandes-script.php:194
+#: views/commandes-script.php:195
 msgid ""
 "Une erreur fatale s'est produite durant la suppression de l'article. Nous "
 "vous recommandons de recommencer le processus de commande. <br><strong>Si le "
@@ -1096,28 +1251,28 @@ msgstr ""
 "that you start the order process.<br><strong>If the problem persists, please "
 "contact the administrator or submit a bug via the support form.</strong>"
 
-#: views/commandes-script.php:288
+#: views/commandes-script.php:286
 msgid "Une commande sans article ne peut être soumise."
 msgstr "A command without item cannot be submitted."
 
-#: views/commandes-script.php:332 views/commandes-script.php:345
+#: views/commandes-script.php:330 views/commandes-script.php:343
 msgid "Commande valide !"
 msgstr "Valid Order!"
 
-#: views/commandes-script.php:332
+#: views/commandes-script.php:330
 msgid "La facture est en cours d\\'impression."
 msgstr "The bill is being printed"
 
-#: views/commandes-script.php:345
+#: views/commandes-script.php:343
 msgid "La facture a été enregistrée."
 msgstr "The invoice was saved."
 
-#: views/commandes-script.php:357
+#: views/commandes-script.php:355
 #, fuzzy
 msgid "Veuillez patienter SVP."
 msgstr "Please be patient."
 
-#: views/commandes-script.php:358
+#: views/commandes-script.php:356
 msgid "La commande est en cours de rafraichissement."
 msgstr "The command is being refreshed."
 
@@ -1135,83 +1290,83 @@ msgstr ""
 "The customer will benefit an automatic reduction. The number of required "
 "purchases had been attained :%s"
 
-#: views/commandes-script.php:425 views/commandes-script.php:431
+#: views/commandes-script.php:436 views/commandes-script.php:442
 #, php-format
 msgid "Remise à %s %%"
 msgstr "Discount to %s %% off"
 
-#: views/commandes-script.php:426 views/commandes-script.php:432
+#: views/commandes-script.php:437 views/commandes-script.php:443
 msgid "Remise à taux fixe"
 msgstr "Flat Discount"
 
-#: views/commandes-script.php:441
+#: views/commandes-script.php:452
 #, fuzzy
 msgid "Cancel discount"
 msgstr "Cancel discount"
 
-#: views/commandes-script.php:514
+#: views/commandes-script.php:525
 msgid "Fermer La Liste"
 msgstr "Hide the list"
 
-#: views/commandes-script.php:519 views/commandes-script.php:657
+#: views/commandes-script.php:530 views/commandes-script.php:668
 msgid "Afficher La Liste"
 msgstr "Display the list"
 
-#: views/commandes-script.php:530
+#: views/commandes-script.php:541
 msgid "Chargement..."
 msgstr "Loading..."
 
-#: views/commandes-script.php:553
+#: views/commandes-script.php:564
 msgid "Détails"
 msgstr "Details"
 
-#: views/commandes-script.php:604
+#: views/commandes-script.php:615
 #, fuzzy
 msgid "Le client a été correctement crée"
 msgstr "The customer has been properly created"
 
-#: views/commandes-script.php:605
+#: views/commandes-script.php:616
 #, fuzzy
 msgid "Un nouveau client a été ajouté à la base de données"
 msgstr "A new customer has been added to the database"
 
-#: views/commandes-script.php:619
+#: views/commandes-script.php:630
 msgid "Une erreur s'est produite durant la création du client"
 msgstr "An error occurred during the creation of the customer"
 
-#: views/commandes-script.php:630
+#: views/commandes-script.php:641
 #, fuzzy
 msgid ""
 "Toutes les autres informations comme la \"date de naissance\" pourront être "
 "remplis ultérieurement."
 msgstr "All other information like \"date of birth\" may be filled later."
 
-#: views/commandes-script.php:634
+#: views/commandes-script.php:645
 #, fuzzy
 msgid "Name"
 msgstr "Name"
 
-#: views/commandes-script.php:660
+#: views/commandes-script.php:671
 #, fuzzy
 msgid "Code de l\\article"
 msgstr "Item Code"
 
-#: views/commandes-script.php:661
+#: views/commandes-script.php:672
 #, fuzzy
 msgid "Code de l'article"
 msgstr "Item Code"
 
-#: views/commandes-script.php:670
+#: views/commandes-script.php:681
 #, fuzzy
 msgid "Enregistrer un nouveau client"
 msgstr "Register a new customer"
 
-#: views/commandes-script.php:708
+#: views/commandes-script.php:719
 #, fuzzy
 msgid "Souhaitez-vous confirmer cette commande ?"
 msgstr "Would you confirm this order?"
 
-#: views/commandes-script.php:794
+#: views/commandes-script.php:803
 msgid ""
 "Le processus de commande à commencé. Si vous continuez, vous perdrez toutes "
 "les informations non enregistrées"
@@ -1301,7 +1456,7 @@ msgstr "Order ID : %s - Nexo Shop Receipt"
 #: views/receipts/default.php:31
 #, fuzzy
 msgid "Téléphone"
-msgstr "Telephone"
+msgstr "Phone"
 
 #: views/receipts/default.php:31
 #, fuzzy
@@ -1634,9 +1789,8 @@ msgstr ""
 "actual value of the order, but above 0"
 
 #: views/shop-checkout-settings.php:81
-#, fuzzy
 msgid "Commande Devis"
-msgstr "control of Work"
+msgstr "Quote Order"
 
 #: views/shop-checkout-settings.php:82
 msgid ""
@@ -1757,6 +1911,16 @@ msgstr "Shop Fax"
 #, fuzzy
 msgid "Notes pour factures"
 msgstr "Notes bills"
+
+#: views/shop-details-settings.php:62
+#, fuzzy
+msgid "Détails supplémentaires"
+msgstr "Additional Details"
+
+#: views/shop-details-settings.php:63
+#, fuzzy
+msgid "Ce champ est susceptible d'être utilisé au pied de page des rapports"
+msgstr "This field is likely to be used at the foot of page reports"
 
 #: views/shop-discount-customers-settings.php:19
 #, fuzzy
@@ -1881,11 +2045,6 @@ msgstr "Complete"
 msgid "Récupération des produits en cours..."
 msgstr "Retrieving current products ..."
 
-#: views/shop-product-settings-script.php:39
-#, fuzzy
-msgid "Une erreur s'est produite."
-msgstr "An error has occurred."
-
 #: views/shop-product-settings-script.php:52
 msgid "Produits trouvés: "
 msgstr "Items Found :"
@@ -1982,6 +2141,70 @@ msgstr "Enable sound effects"
 #, fuzzy
 msgid "Activer"
 msgstr "Enable"
+
+#~ msgid "Nom de la collection"
+#~ msgstr "Collection Name"
+
+#, fuzzy
+#~ msgid "Liste des arrivages &mdash; Nexo"
+#~ msgstr "List of arrivals &mdash; Nexo"
+
+#, fuzzy
+#~ msgid "Ajouter un nouvel arrivage &mdash; Nexo"
+#~ msgstr "Add a new arrival &mdash; Nexo"
+
+#, fuzzy
+#~ msgid "Ajouter un nouvel arrivage : &mdash; %s"
+#~ msgstr "Add a new arrival: &mdash; %s"
+
+#~ msgid "Gestion & Création des arrivages"
+#~ msgstr "Shipping management"
+
+#~ msgid "Historique des commandes"
+#~ msgstr "Orders history"
+
+#, fuzzy
+#~ msgid "Tous les clients"
+#~ msgstr "All clients"
+
+#~ msgid "Historique des arrivages"
+#~ msgstr "Shipping History"
+
+#~ msgid "Nouvel arrivage"
+#~ msgstr "New Shipping"
+
+#~ msgid "Liste des bons d'avoir"
+#~ msgstr "Good to have list"
+
+#~ msgid "Nouveau bon d'avoir"
+#~ msgstr "New good to have"
+
+#, fuzzy
+#~ msgid "'"
+#~ msgstr "'"
+
+#~ msgid "Liste : %s &mdash; %s"
+#~ msgstr "List: %s -%s"
+
+#, fuzzy
+#~ msgid "Ajouter : %s &mdash; %s"
+#~ msgstr "Add:%s -%s"
+
+#, fuzzy
+#~ msgid "Liste : "
+#~ msgstr "List:"
+
+#, fuzzy
+#~ msgid "Ajouter : "
+#~ msgstr "Add:"
+
+#, fuzzy
+#~ msgid "Créer une nouvelle commande &mdash; %s"
+#~ msgstr "Create a new order -%s"
+
+#, fuzzy
+#~ msgid "Réglages de la boutique &mdash; %s"
+#~ msgstr "Settings Shop -%s"
 
 #~ msgid "Circonstrire les produits"
 #~ msgstr "Circumscribe Items"
@@ -2177,51 +2400,6 @@ msgstr "Enable"
 #, fuzzy
 #~ msgid "Fin de la promotion"
 #~ msgstr "End Promotion"
-
-#~ msgid "Gérant de la caisse"
-#~ msgstr "Checkout Manager"
-
-#~ msgid "Gérant de la boutique"
-#~ msgstr "Shop Manager"
-
-#~ msgid "Privilège pour testeur"
-#~ msgstr "Tester Privilege"
-
-#~ msgid "Peut créer des commandes"
-#~ msgstr "Can create orders"
-
-#~ msgid "Peut modifier des commandes"
-#~ msgstr "Can change orders"
-
-#~ msgid "Peut supprimer les commandes"
-#~ msgstr "Can delete orders"
-
-#~ msgid "Peut créer des produits"
-#~ msgstr "Create products"
-
-#~ msgid "Peut modifier des produits"
-#~ msgstr "Can modify products"
-
-#~ msgid "Peut supprimer des produits"
-#~ msgstr "Can remove products"
-
-#~ msgid "Gère les catégories"
-#~ msgstr "Manage categories"
-
-#~ msgid "Gère les rayons"
-#~ msgstr "Manage rays"
-
-#~ msgid "Gère les collections"
-#~ msgstr "Manage collections"
-
-#~ msgid "Gère les fournisseurs (Livreurs)"
-#~ msgstr "Manage suppliers"
-
-#~ msgid "Autorise la gestion complète de la boutique"
-#~ msgstr "Allows the complete management of the shop"
-
-#~ msgid "Votre licence expire le %d-%m-%Y à %h:%i"
-#~ msgstr "Your license expires o %d-%m-%Y - %h:%i "
 
 #, fuzzy
 #~ msgid "Afficher la liste"

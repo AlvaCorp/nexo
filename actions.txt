@@ -11,3 +11,8 @@ Regroupe toutes les actions de la boutique
  * nexo_daily_report_footer 
  * Execute une action au peid de page du rapport journalier
 **/	
+
+/**
+ * nexo_escape_nexoadds
+ * Permet de désactiver les annonces
+**/

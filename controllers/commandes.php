@@ -105,7 +105,7 @@ class Nexo_Commandes extends CI_Model
 			
 			$data[ 'crud_content' ]	=	$this->crud_header();
 			$_var1	=	'commandes';
-				$this->Gui->set_title( __( 'Créer une nouvelle commande &mdash; Nexo', 'nexo' ) );
+			$this->Gui->set_title( __( 'Créer une nouvelle commande &mdash; Nexo', 'nexo' ) );
 			$this->load->view( '../modules/nexo/views/' . $_var1 . '-new.php', $data );
 		} else if( $page == 'edit' ){
 

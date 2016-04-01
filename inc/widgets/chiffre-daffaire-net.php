@@ -1,18 +1,19 @@
 <?php
 use Carbon\Carbon;
 
-$Cron	=	new Nexo_Cron;
+$Cron		=	new Nexo_Cron;
 
 $StartDate	=	Carbon::parse( date_now() )->subDays( 7 )->toDateString();
 $EndDate	=	Carbon::parse( date_now() )->toDateString();
 
-$Stats	=	$Cron->get_stats( $StartDate, $EndDate );
+$Stats		=	$Cron->get_stats( $StartDate, $EndDate );
 $NbrOrder	=	array();
 
 foreach( $Stats as $stat ) {
 	$NbrOrder[]		=	$stat[ 'chiffre_daffaire_net' ];
 }
 $Dates	=	array_keys( $Stats );
+
 ?>
 <script type="text/javascript">
 	$( document ).ready(function(e) {

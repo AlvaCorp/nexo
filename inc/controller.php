@@ -29,7 +29,7 @@ class Nexo_Controller extends CI_Model
 				'disable'		=>	true
             ),
 			array(
-                'title'       =>	__( 'Historique des commandes', 'nexo' ), // menu title
+                'title'       =>	__( 'Liste des commandes', 'nexo' ), // menu title
                 'icon'        =>    'fa fa-star', // menu icon
                 'href'        =>	site_url('dashboard/nexo/commandes/lists'), // url to the page,
             ),
@@ -38,6 +38,7 @@ class Nexo_Controller extends CI_Model
                 'icon'        =>    'fa fa-star', // menu icon
                 'href'        =>	site_url('dashboard/nexo/commandes/lists/add'), // url to the page,
             ),
+			/**
 			array(
                 'title'       =>	__( 'Liste des bons d\'avoir', 'nexo' ), // menu title
                 'icon'        =>    'fa fa-star', // menu icon
@@ -48,6 +49,7 @@ class Nexo_Controller extends CI_Model
                 'icon'        =>    'fa fa-star', // menu icon
                 'href'        =>	'http://nexo.tendoo.org/get-premium', // site_url('dashboard/nexo/bon_davoir/add'), // url to the page,
             ),
+			**/
 			array(
                 'title'       =>	__( 'Liste des moyens de paiment', 'nexo' ), // menu title
                 'icon'        =>    'fa fa-star', // menu icon
@@ -78,7 +80,7 @@ class Nexo_Controller extends CI_Model
 				'icon'		=>	'fa fa-users'
 			),
 			array( 
-				'title'		=>	__( 'Tous les clients', 'nexo' ),
+				'title'		=>	__( 'Liste des clients', 'nexo' ),
 				'href'		=>	site_url( 'dashboard/nexo/clients/lists' ),
 			),
 			array( 
@@ -103,11 +105,11 @@ class Nexo_Controller extends CI_Model
 				'icon'		=>	'fa fa-truck'
 			),
 			array( 
-				'title'		=>	__( 'Historique des arrivages', 'nexo' ),
+				'title'		=>	__( 'Liste des livraisons', 'nexo' ),
 				'href'		=>	site_url( 'dashboard/nexo/arrivages/lists' ),
 			),
 			array( 
-				'title'		=>	__( 'Nouvel arrivage', 'nexo' ),
+				'title'		=>	__( 'Nouvelle livraison', 'nexo' ),
 				'href'		=>	site_url( 'dashboard/nexo/arrivages/add' ),
 			),
 			array( 
